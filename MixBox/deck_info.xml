@@ -162,7 +162,7 @@
                 <SignalColor><Variable name="Accent"/></SignalColor>
                 <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
                 <PlayPosColor><Variable name="WfPlay"/></PlayPosColor>
-                <PlayedOverlayColor>#20ffffff</PlayedOverlayColor>
+                <PlayedOverlayColor>#a62e343d</PlayedOverlayColor>
                 <DefaultMark>
                   <Align>bottom|right</Align>
                   <Color><Variable name="CueColor"/></Color>
