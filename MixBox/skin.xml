@@ -7,11 +7,11 @@
 -->
 <skin>
   <manifest>
-    <title>Mixbox v2 Touchscreen</title>
-    <author>windup-bird</author><version>5.0.0</version>
+    <title>Mixbox</title>
+    <author>windup-bird</author><version>1.0.0</version>
     <description>Modern dark skin for touchscreen DJ devices — MixboxQML-inspired palette (1024x600+).</description>
     <language>en</language>
-    <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
+    <license>GPL-2.0-or-later</license>
     <attributes>
       <attribute config_key="[App],num_decks">4</attribute>
       <attribute config_key="[App],num_samplers">8</attribute>
