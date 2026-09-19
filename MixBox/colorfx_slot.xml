@@ -9,7 +9,7 @@
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
           <KnobComposed>
             <Size>38f,38f</Size>
-            <MinAngle>-130</MinAngle><MaxAngle>130</MaxAngle>
+            <MinAngle>-120</MinAngle><MaxAngle>120</MaxAngle>
             <ArcRadius>15</ArcRadius><ArcThickness>3</ArcThickness>
             <ArcBgColor>#2c3646</ArcBgColor><ArcBgThickness>2</ArcBgThickness>
             <ArcRoundCaps>true</ArcRoundCaps>

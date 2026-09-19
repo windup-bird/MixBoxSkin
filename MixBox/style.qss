@@ -28,21 +28,24 @@ WEffectMetaKnob, WBeatSpinBox {
 #ToolbarButton {
   background-color: #1c2430; color: #a2b1c6;
   border: none; border-radius: 6px; font-size: 11px; font-weight: bold;
-  min-width: 60px; min-height: 28px; padding: 2px 10px;
+  min-width: 60px; min-height: 26px; padding: 2px 10px;
 }
 #ToolbarButton[value="1"] { background-color: #3d8bfd; color: #0b1017; }
 #ClockLabel { color: #e9eef6; font-size: 14px; font-weight: bold; }
 #MiniVuMeter { background-color: #141a24; border: none; border-radius: 2px; }
-#RecButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-height: 28px; }
+#RecButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-height: 26px; }
 #RecButton[value="1"], #RecButton[highlight="1"] { background-color: #f87171; color: #fff; }
 #RecDuration { color: #a2b1c6; font-size: 12px; }
 #RecDuration[highlight="1"] { color: #f87171; font-weight: bold; }
 
 /************** Waveform *******************************************/
 #WaveformArea { background-color: #0a0f16; margin: 1px 0px; }
-#WfDeckLabel1 { background-color: #3d8bfd; } #WfDeckLabel2 { background-color: #22d3ee; }
-#WfDeckLabel3 { background-color: #8b7cf8; } #WfDeckLabel4 { background-color: #ee7fb0; }
-#WfDeckNum { color: #0b1017; font-size: 20px; font-weight: bold; }
+#WfDeckLabel1, #WfDeckLabel2, #WfDeckLabel3, #WfDeckLabel4 { background-color: transparent; }
+#WfDeckNum { color: #e9eef6; font-size: 20px; font-weight: bold; }
+#WfDeckLabel1 #WfDeckNum { color: #3d8bfd; }
+#WfDeckLabel2 #WfDeckNum { color: #22d3ee; }
+#WfDeckLabel3 #WfDeckNum { color: #8b7cf8; }
+#WfDeckLabel4 #WfDeckNum { color: #ee7fb0; }
 
 /************** Library *******************************************/
 #LibraryContainer { background-color: #0b1017; padding: 2px; }
@@ -77,7 +80,7 @@ WLibrarySidebar::item:selected { background-color: #16243c; color: #3d8bfd; }
 #HotcuePad {
   background-color: #1c2430; color: #a2b1c6;
   border: none; border-radius: 6px; font-size: 16px; font-weight: bold; margin: 2px;
-  min-width: 40px; min-height: 36px;
+  min-width: 40px; min-height: 30px;
 }
 #HotcuePad[value="1"], #HotcuePad[highlight="1"] { color: #fff; }
 
@@ -85,29 +88,29 @@ WLibrarySidebar::item:selected { background-color: #16243c; color: #3d8bfd; }
 #LoopControl, #BeatjumpControl { background-color: #141a24; border-radius: 8px; padding: 2px; }
 #LoopSizeBtn, #JumpSizeBtn {
   background-color: #1c2430; color: #a2b1c6;
-  border: none; border-radius: 6px; font-size: 18px; font-weight: bold;
-  min-width: 48px; min-height: 40px;
+  border: none; border-radius: 6px; font-size: 16px; font-weight: bold;
+  min-width: 48px; min-height: 32px;
 }
 #LoopSizeBtn:hover, #JumpSizeBtn:hover { color: #3d8bfd; }
 #LoopSizeSpinBox, #JumpSizeSpinBox {
   background-color: #141a24; color: #e9eef6;
-  border: 1px solid #2c3646; border-radius: 6px; font-size: 16px; font-weight: bold;
-  min-width: 48px; min-height: 40px;
+  border: 1px solid #2c3646; border-radius: 6px; font-size: 15px; font-weight: bold;
+  min-width: 48px; min-height: 32px;
 }
 #LoopInOutBtn {
   background-color: #1c2430; color: #a2b1c6;
-  border: none; border-radius: 6px; font-size: 14px; font-weight: bold;
-  min-width: 48px; min-height: 40px;
+  border: none; border-radius: 6px; font-size: 13px; font-weight: bold;
+  min-width: 48px; min-height: 32px;
 }
 #LoopInOutBtn:hover { color: #34d399; }
 #LoopInOutBtn[pressed="true"], #LoopInOutBtn[highlight="1"] { background-color: #34d399; color: #0b1017; }
 #JumpBtn {
   background-color: #1c2430; color: #63a4ff;
-  border: none; border-radius: 6px; font-size: 18px; font-weight: bold;
-  min-width: 48px; min-height: 40px;
+  border: none; border-radius: 6px; font-size: 16px; font-weight: bold;
+  min-width: 48px; min-height: 32px;
 }
 #JumpBtn:hover { background-color: #63a4ff; color: #0b1017; }
-WBeatSpinBox { background-color: #141a24; color: #e9eef6; border: 1px solid #2c3646; border-radius: 6px; font-size: 15px; min-height: 36px; }
+WBeatSpinBox { background-color: #141a24; color: #e9eef6; border: 1px solid #2c3646; border-radius: 6px; font-size: 14px; min-height: 30px; }
 WBeatSpinBox::up-button, WBeatSpinBox::down-button { width: 0px; height: 0px; subcontrol-origin: margin; subcontrol-position: top right; }
 WBeatSpinBox::down-arrow, WBeatSpinBox::up-arrow { width: 0px; height: 0px; }
 

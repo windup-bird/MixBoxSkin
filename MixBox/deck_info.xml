@@ -16,30 +16,28 @@
         </Children>
       </WidgetGroup>
 
-      <!-- Cover art -->
-      <WidgetGroup>
-        <Layout>vertical</Layout><Size>60f,0me</Size>
-        <Children>
-          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
-          <CoverArt>
-            <SizePolicy>me,me</SizePolicy><Group><Variable name="Group"/></Group>
-            <Connection><ConfigKey>[Skin],show_coverart</ConfigKey><BindProperty>visible</BindProperty></Connection>
-          </CoverArt>
-          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
-        </Children>
-      </WidgetGroup>
-
       <!-- Main column: Track info + Meta on top, Overview below -->
       <WidgetGroup>
         <Layout>vertical</Layout>
         <SizePolicy>i,me</SizePolicy>
         <Children>
 
-          <!-- ═══ UPPER HALF: title + meta ═══ -->
+          <!-- ═══ UPPER HALF: cover + title + meta ═══ -->
           <WidgetGroup>
             <Layout>horizontal</Layout>
             <SizePolicy>me,me</SizePolicy>
             <Children>
+
+              <!-- Cover art（在 overview 上方） -->
+              <WidgetGroup>
+                <Layout>vertical</Layout><Size>60f,0me</Size><SizePolicy>min,me</SizePolicy>
+                <Children>
+                  <CoverArt>
+                    <SizePolicy>me,me</SizePolicy><Group><Variable name="Group"/></Group>
+                    <Connection><ConfigKey>[Skin],show_coverart</ConfigKey><BindProperty>visible</BindProperty></Connection>
+                  </CoverArt>
+                </Children>
+              </WidgetGroup>
 
               <!-- Track Title + Artist -->
               <WidgetGroup><Layout>vertical</Layout><SizePolicy>i,me</SizePolicy>

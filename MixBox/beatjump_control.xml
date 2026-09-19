@@ -4,7 +4,7 @@
     <Children>
       <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
       <!-- Row 1: size control -->
-      <WidgetGroup><Layout>horizontal</Layout><Size>0me,40f</Size>
+      <WidgetGroup><Layout>horizontal</Layout><Size>0me,32f</Size>
         <Children>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
           <PushButton>
@@ -28,7 +28,7 @@
       </WidgetGroup>
       <WidgetGroup><Size>0min,2f</Size></WidgetGroup>
       <!-- Row 2: jump buttons -->
-      <WidgetGroup><Layout>horizontal</Layout><Size>0me,40f</Size>
+      <WidgetGroup><Layout>horizontal</Layout><Size>0me,32f</Size>
         <Children>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
           <PushButton>
