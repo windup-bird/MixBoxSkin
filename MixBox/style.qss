@@ -3,7 +3,8 @@
    文字 #e9eef6 / #a2b1c6 / #7688a0
    强调 #3d8bfd，高亮 #63a4ff，选中底 #16243c
    Deck1 #3d8bfd  Deck2 #22d3ee  Deck3 #8b7cf8  Deck4 #ee7fb0
-   语义 cue #f87171  loop #34d399  master #fbbf24 */
+   语义 cue #f87171  loop #34d399  master #fbbf24
+   封面底板 #2e343d（封面按比例缩放后左右露出的那条） */
 /* ================================================================ */
 
 /************** Fonts **********************************************/
@@ -137,7 +138,7 @@ WEffectChainPresetSelector#QuickEffectSelectorLeft {
 #DeckArea { background-color: #0b1017; padding: 0px; }
 #DeckInfoCard { background-color: #141a24; border: none; border-radius: 10px; margin: 1px 1px; padding: 4px 4px; }
 #DeckNumber { color: #e9eef6; font-size: 24px; font-weight: bold; }
-WCoverArt { background-color: #0b1017; border: none; border-radius: 8px; }
+WCoverArt { background-color: #2e343d; border: none; border-radius: 8px; }
 
 #DeckTitle { color: #e9eef6; font-size: 16px; font-weight: bold; padding: 0px 3px; }
 #DeckArtist { color: #a2b1c6; font-size: 13px; padding: 0px 3px; }
