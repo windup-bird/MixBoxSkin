@@ -2,9 +2,8 @@
   <WidgetGroup>
     <ObjectName>LoopControl</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
     <Children>
-      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
-      <!-- Row 1: size control -->
-      <WidgetGroup><Layout>horizontal</Layout><Size>0me,26f</Size>
+      <!-- Row 1: size control（与 hotcue 垫第一行同构、等比弹性，故纵向对齐） -->
+      <WidgetGroup><ObjectName>LoopRow</ObjectName><Layout>horizontal</Layout><Size>0me,0me</Size><SizePolicy>me,me</SizePolicy>
         <Children>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
           <PushButton>
@@ -14,7 +13,7 @@
           </PushButton>
           <WidgetGroup><Size>3f,min</Size></WidgetGroup>
           <BeatSpinBox>
-            <ObjectName>LoopSizeSpinBox</ObjectName><SizePolicy>me,min</SizePolicy><MinimumSize>36,0</MinimumSize><MaximumSize>48,40</MaximumSize>
+            <ObjectName>LoopSizeSpinBox</ObjectName><SizePolicy>me,me</SizePolicy><MinimumSize>36,0</MinimumSize><MaximumSize>48,40</MaximumSize>
             <Value>[Channel<Variable name="ChanNum"/>],beatloop_size</Value>
           </BeatSpinBox>
           <WidgetGroup><Size>3f,min</Size></WidgetGroup>
@@ -26,9 +25,8 @@
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
         </Children>
       </WidgetGroup>
-      <WidgetGroup><Size>0min,2f</Size></WidgetGroup>
       <!-- Row 2: IN / OUT -->
-      <WidgetGroup><Layout>horizontal</Layout><Size>0me,26f</Size>
+      <WidgetGroup><ObjectName>LoopRow</ObjectName><Layout>horizontal</Layout><Size>0me,0me</Size><SizePolicy>me,me</SizePolicy>
         <Children>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
           <PushButton>
@@ -49,7 +47,6 @@
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
         </Children>
       </WidgetGroup>
-      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
     </Children>
   </WidgetGroup>
 </Template>

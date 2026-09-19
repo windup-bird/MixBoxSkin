@@ -119,11 +119,12 @@
                   </WidgetGroup>
                   <WidgetGroup><Size>4f,min</Size></WidgetGroup>
 
-                  <!-- SYNC + MT：两个按钮平分纵向空间，sync_leader 状态直接显示在 SYNC 按钮上 -->
+                  <!-- SYNC + MT：固定高度（真实生效，不再被 me 撑满），上下居中 -->
                   <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MinimumSize>52,</MinimumSize>
                     <Children>
+                      <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
                       <PushButton>
-                        <ObjectName>SyncButton</ObjectName><Size>48f,0me</Size><SizePolicy>me,me</SizePolicy><NumberStates>2</NumberStates>
+                        <ObjectName>SyncButton</ObjectName><Size>48f,20f</Size><NumberStates>2</NumberStates>
                         <State><Number>0</Number><Text>SYNC</Text></State><State><Number>1</Number><Text>SYNC</Text></State>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_enabled</ConfigKey><ButtonState>LeftButton</ButtonState></Connection>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_leader</ConfigKey><ButtonState>RightButton</ButtonState></Connection>
@@ -133,11 +134,13 @@
                           <Transform><IsEqual>0</IsEqual><SetValue>SYNC</SetValue></Transform>
                         </Connection>
                       </PushButton>
+                      <WidgetGroup><Size>0min,2f</Size></WidgetGroup>
                       <PushButton>
-                        <ObjectName>MTButton</ObjectName><Size>48f,0me</Size><SizePolicy>me,me</SizePolicy><NumberStates>2</NumberStates>
+                        <ObjectName>MTButton</ObjectName><Size>48f,20f</Size><NumberStates>2</NumberStates>
                         <State><Number>0</Number><Text>MT</Text></State><State><Number>1</Number><Text>MT</Text></State>
                         <Connection><ConfigKey><Variable name="Group"/>,keylock</ConfigKey></Connection>
                       </PushButton>
+                      <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
                     </Children>
                   </WidgetGroup>
                 </Children>
