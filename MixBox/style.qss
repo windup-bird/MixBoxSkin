@@ -89,28 +89,28 @@ WLibrarySidebar::item:selected { background-color: #16243c; color: #3d8bfd; }
 #LoopSizeBtn, #JumpSizeBtn {
   background-color: #1c2430; color: #a2b1c6;
   border: none; border-radius: 6px; font-size: 16px; font-weight: bold;
-  min-width: 48px; min-height: 32px;
+  min-width: 48px; min-height: 26px;
 }
 #LoopSizeBtn:hover, #JumpSizeBtn:hover { color: #3d8bfd; }
 #LoopSizeSpinBox, #JumpSizeSpinBox {
   background-color: #141a24; color: #e9eef6;
   border: 1px solid #2c3646; border-radius: 6px; font-size: 15px; font-weight: bold;
-  min-width: 48px; min-height: 32px;
+  min-width: 48px; min-height: 26px;
 }
 #LoopInOutBtn {
   background-color: #1c2430; color: #a2b1c6;
   border: none; border-radius: 6px; font-size: 13px; font-weight: bold;
-  min-width: 48px; min-height: 32px;
+  min-width: 48px; min-height: 26px;
 }
 #LoopInOutBtn:hover { color: #34d399; }
 #LoopInOutBtn[pressed="true"], #LoopInOutBtn[highlight="1"] { background-color: #34d399; color: #0b1017; }
 #JumpBtn {
   background-color: #1c2430; color: #63a4ff;
   border: none; border-radius: 6px; font-size: 16px; font-weight: bold;
-  min-width: 48px; min-height: 32px;
+  min-width: 48px; min-height: 26px;
 }
 #JumpBtn:hover { background-color: #63a4ff; color: #0b1017; }
-WBeatSpinBox { background-color: #141a24; color: #e9eef6; border: 1px solid #2c3646; border-radius: 6px; font-size: 14px; min-height: 30px; }
+WBeatSpinBox { background-color: #141a24; color: #e9eef6; border: 1px solid #2c3646; border-radius: 6px; font-size: 14px; min-height: 24px; }
 WBeatSpinBox::up-button, WBeatSpinBox::down-button { width: 0px; height: 0px; subcontrol-origin: margin; subcontrol-position: top right; }
 WBeatSpinBox::down-arrow, WBeatSpinBox::up-arrow { width: 0px; height: 0px; }
 
@@ -149,11 +149,11 @@ WCoverArt { background-color: #0b1017; border: none; border-radius: 8px; }
 #BpmText { color: #e9eef6; font-size: 16px; font-weight: bold; }
 #DeckTime { color: #e9eef6; font-size: 16px; font-weight: bold; }
 
-#SyncButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 26px; }
+#SyncButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 22px; }
 #SyncButton[value="1"] { background-color: #63a4ff; color: #0b1017; }
 #SyncButton[highlight="1"] { background-color: #fbbf24; color: #0b1017; }
 
-#MTButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 26px; }
+#MTButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 22px; }
 #MTButton[value="1"] { background-color: #3d8bfd; color: #0b1017; }
 
 #RateRangeText { color: #a2b1c6; font-size: 11px; }

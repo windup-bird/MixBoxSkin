@@ -7,10 +7,10 @@
 
       <!-- Deck number -->
       <WidgetGroup>
-        <Layout>vertical</Layout><Size>44f,0me</Size>
+        <Layout>vertical</Layout><Size>32f,0me</Size>
         <Children>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
-          <Label><ObjectName>DeckNumber</ObjectName><Size>44f,44f</Size>
+          <Label><ObjectName>DeckNumber</ObjectName><Size>32f,32f</Size>
             <Text><Variable name="ChanNum"/></Text><Alignment>center</Alignment></Label>
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
         </Children>
