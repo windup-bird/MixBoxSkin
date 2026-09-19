@@ -25,19 +25,19 @@ WEffectMetaKnob, WBeatSpinBox {
 #Mixxx { background-color: #0b1017; }
 
 /************** Toolbar ********************************************/
-#Toolbar { background-color: #0b1017; padding: 3px 4px; }
+#Toolbar { background-color: #0b1017; padding: 4px 6px; }
 #ToolbarButton {
   background-color: #1c2430; color: #a2b1c6;
-  border: none; border-radius: 6px; font-size: 11px; font-weight: bold;
-  min-width: 60px; min-height: 26px; padding: 2px 10px;
+  border: none; border-radius: 6px; font-size: 13px; font-weight: bold;
+  min-width: 90px; min-height: 42px; padding: 2px 10px;
 }
 #ToolbarButton[value="1"] { background-color: #3d8bfd; color: #0b1017; }
-#ClockLabel { color: #e9eef6; font-size: 14px; font-weight: bold; }
+#ClockLabel { color: #e9eef6; font-size: 16px; font-weight: bold; }
 #MiniVuMeter { background-color: #141a24; border: none; border-radius: 2px; }
-#RecButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-height: 26px; }
-#RecButton[value="1"], #RecButton[highlight="1"] { background-color: #f87171; color: #fff; }
-#RecDuration { color: #a2b1c6; font-size: 12px; }
-#RecDuration[highlight="1"] { color: #f87171; font-weight: bold; }
+#RecButton { background-color: #1c2430; color: #a2b1c6; border: none; border-radius: 6px; font-size: 12px; font-weight: bold; min-height: 42px; }
+#RecButton[highlight="2"] { background-color: #f87171; color: #fff; }
+#RecDuration { color: #a2b1c6; font-size: 13px; }
+#RecDuration[highlight="2"] { color: #f87171; font-weight: bold; }
 
 /************** Waveform *******************************************/
 #WaveformArea { background-color: #0a0f16; margin: 1px 0px; }
@@ -162,9 +162,6 @@ WCoverArt { background-color: transparent; border: none; }
 #DeckOverviewClip { background-color: #0a0f16; border: none; overflow: hidden; }
 #DeckOverview { margin: 50% 0; }
 WOverview { background-color: #0a0f16; border: none; }
-
-/************** Settings ******************************************/
-#SettingsPanel { background-color: #1c2430; margin: 2px 0px; border-radius: 10px; padding: 8px; }
 
 /************** Misc ***********************************************/
 #ToolbarSpacer { background-color: transparent; }

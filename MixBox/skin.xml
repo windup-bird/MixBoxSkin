@@ -18,7 +18,6 @@
       <attribute persist="true" config_key="[Skin],aio_show_deckfx">1</attribute>
       <attribute persist="true" config_key="[Skin],aio_show_colorfx">1</attribute>
       <attribute persist="true" config_key="[Skin],show_coverart">1</attribute>
-      <attribute persist="true" config_key="[Skin],show_settings">0</attribute>
     </attributes>
   </manifest>
 
@@ -49,50 +48,46 @@
   <Children>
 
     <!-- ═══ TOOLBAR ═══ -->
-    <WidgetGroup><ObjectName>Toolbar</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,44</MaximumSize>
+    <WidgetGroup><ObjectName>Toolbar</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,60</MaximumSize>
     <Children>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>105f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>BROWSE</Text></State><State><Number>1</Number><Text>BROWSE</Text></State>
         <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey></Connection></PushButton>
       <WidgetGroup><Size>3f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>105f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>HOTCUE</Text></State><State><Number>1</Number><Text>HOTCUE</Text></State>
         <Connection><ConfigKey>[Skin],aio_show_hotcue</ConfigKey></Connection></PushButton>
       <WidgetGroup><Size>3f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>90f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>135f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>LOOP/JUMP</Text></State><State><Number>1</Number><Text>LOOP/JUMP</Text></State>
         <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey></Connection></PushButton>
       <WidgetGroup><Size>3f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>105f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>DECK FX</Text></State><State><Number>1</Number><Text>DECK FX</Text></State>
         <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey></Connection></PushButton>
       <WidgetGroup><Size>3f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>105f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>COLOR FX</Text></State><State><Number>1</Number><Text>COLOR FX</Text></State>
         <Connection><ConfigKey>[Skin],aio_show_colorfx</ConfigKey></Connection></PushButton>
       <WidgetGroup><Size>3f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>105f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>2-DECK</Text></State><State><Number>1</Number><Text>4-DECK</Text></State>
         <Connection><ConfigKey persist="true">[Skin],aio_show_4decks</ConfigKey></Connection></PushButton>
       <WidgetGroup><ObjectName>ToolbarSpacer</ObjectName><SizePolicy>me,min</SizePolicy></WidgetGroup>
-      <Time><ObjectName>ClockLabel</ObjectName><Size>56f,36f</Size></Time>
+      <Time><ObjectName>ClockLabel</ObjectName><Size>72f,48f</Size></Time>
       <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-      <RecordingDuration><ObjectName>RecDuration</ObjectName><Size>40f,36f</Size><InactiveText/><Alignment>center</Alignment>
+      <RecordingDuration><ObjectName>RecDuration</ObjectName><Size>52f,48f</Size><InactiveText/><Alignment>center</Alignment>
         <Connection><ConfigKey>[Recording],status</ConfigKey><BindProperty>highlight</BindProperty></Connection></RecordingDuration>
       <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-      <VuMeter><ObjectName>MiniVuMeter</ObjectName><Size>40f,14f</Size><Horizontal>true</Horizontal><PeakHoldSize>3</PeakHoldSize><PeakHoldTime>500</PeakHoldTime>
+      <VuMeter><ObjectName>MiniVuMeter</ObjectName><Size>52f,18f</Size><Horizontal>true</Horizontal><PeakHoldSize>3</PeakHoldSize><PeakHoldTime>500</PeakHoldTime>
         <Connection><ConfigKey>[Main],vu_meter</ConfigKey></Connection></VuMeter>
       <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>RecButton</ObjectName><Size>44f,36f</Size><NumberStates>2</NumberStates>
+      <PushButton><ObjectName>RecButton</ObjectName><Size>60f,48f</Size><NumberStates>2</NumberStates>
         <State><Number>0</Number><Text>REC</Text></State><State><Number>1</Number><Text>● REC</Text></State>
         <Connection><ConfigKey>[Recording],toggle_recording</ConfigKey></Connection>
-        <Connection><ConfigKey>[Recording],status</ConfigKey><BindProperty>highlight</BindProperty><Transform><IsEqual>2</IsEqual></Transform></Connection></PushButton>
+        <Connection><ConfigKey>[Recording],status</ConfigKey><BindProperty>highlight</BindProperty></Connection></PushButton>
       <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>80f,36f</Size><NumberStates>2</NumberStates>
-        <State><Number>0</Number><Text>SETTINGS</Text></State><State><Number>1</Number><Text>SETTINGS</Text></State>
-        <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
-      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-      <Battery><ObjectName>BatteryIcon</ObjectName><Size>18,18</Size></Battery>
+      <Battery><ObjectName>BatteryIcon</ObjectName><Size>22,22</Size></Battery>
     </Children></WidgetGroup>
 
     <!-- ═══ MAIN ═══ -->
@@ -303,25 +298,6 @@
         </WidgetGroup>
       </Children>
       <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey><Transform><Not/></Transform><BindProperty>visible</BindProperty></Connection>
-      </WidgetGroup>
-
-      <!-- SETTINGS — compact horizontal bar above waveform -->
-      <WidgetGroup><ObjectName>SettingsPanel</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,38</MaximumSize>
-        <Children>
-          <WidgetGroup><ObjectName>ToolbarSpacer</ObjectName><SizePolicy>me,min</SizePolicy></WidgetGroup>
-          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>140f,32f</Size><NumberStates>2</NumberStates>
-            <State><Number>0</Number><Text>Fullscreen  F11</Text></State><State><Number>1</Number><Text>Fullscreen  F11</Text></State>
-            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
-          <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>160f,32f</Size><NumberStates>2</NumberStates>
-            <State><Number>0</Number><Text>Preferences  Ctrl+P</Text></State><State><Number>1</Number><Text>Preferences  Ctrl+P</Text></State>
-            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
-          <WidgetGroup><Size>4f,min</Size></WidgetGroup>
-          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>140f,32f</Size><NumberStates>2</NumberStates>
-            <State><Number>0</Number><Text>Quit  Ctrl+Q</Text></State><State><Number>1</Number><Text>Quit  Ctrl+Q</Text></State>
-            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
-        </Children>
-        <Connection><ConfigKey>[Skin],show_settings</ConfigKey><BindProperty>visible</BindProperty></Connection>
       </WidgetGroup>
 
       <!-- ═══ DECK AREA ═══ -->
