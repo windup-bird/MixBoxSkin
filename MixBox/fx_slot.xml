@@ -10,9 +10,9 @@
           <EffectMetaKnob>
             <Size>38f,38f</Size>
             <ArcRadius>13</ArcRadius><ArcThickness>3</ArcThickness>
-            <ArcBgColor>#181e26</ArcBgColor><ArcBgThickness>2</ArcBgThickness>
+            <ArcBgColor>#2c3646</ArcBgColor><ArcBgThickness>2</ArcBgThickness>
             <ArcRoundCaps>true</ArcRoundCaps>
-            <ArcColor>#00d4aa</ArcColor>
+            <ArcColor>#3d8bfd</ArcColor>
             <EffectUnit><Variable name="FxUnit"/></EffectUnit><Effect><Variable name="FxNum"/></Effect>
             <Connection><ConfigKey>[EffectRack1_EffectUnit<Variable name="FxUnit"/>_Effect<Variable name="FxNum"/>],meta</ConfigKey></Connection>
           </EffectMetaKnob>

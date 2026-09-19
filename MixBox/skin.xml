@@ -26,9 +26,18 @@
     <Scheme>
       <Name>Dark</Name>
       <Style src="skin:style.qss"/>
-      <SetVariable name="WaveformBg">#080c12</SetVariable>
-      <SetVariable name="Sig1">#00d4aa</SetVariable><SetVariable name="Sig2">#00a8e8</SetVariable>
-      <SetVariable name="Sig3">#7b68ee</SetVariable><SetVariable name="Sig4">#ff6b9d</SetVariable>
+      <SetVariable name="Accent">#3d8bfd</SetVariable>
+      <SetVariable name="TextLow">#7688a0</SetVariable>
+      <SetVariable name="CueColor">#f87171</SetVariable>
+      <SetVariable name="LoopColor">#34d399</SetVariable>
+      <SetVariable name="WaveformBg">#0a0f16</SetVariable>
+      <SetVariable name="WfLow">#1d4ed8</SetVariable>
+      <SetVariable name="WfMid">#3b82f6</SetVariable>
+      <SetVariable name="WfHigh">#93c5fd</SetVariable>
+      <SetVariable name="WfPlay">#e9eef6</SetVariable>
+      <SetVariable name="WfBeat">#2b3a4d</SetVariable>
+      <SetVariable name="Sig1">#3d8bfd</SetVariable><SetVariable name="Sig2">#22d3ee</SetVariable>
+      <SetVariable name="Sig3">#8b7cf8</SetVariable><SetVariable name="Sig4">#ee7fb0</SetVariable>
     </Scheme>
   </Schemes>
 
@@ -99,12 +108,12 @@
               <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>3</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
             <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel3]</Group>
               <SignalColor><Variable name="Sig3"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
-              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
-              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
-              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
-              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
+              <PlayPosColor><Variable name="WfPlay"/></PlayPosColor><BeatColor><Variable name="WfBeat"/></BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color><Variable name="WfPlay"/></Color><TextColor><Variable name="WfPlay"/></TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color><Variable name="CueColor"/></Color><TextColor><Variable name="CueColor"/></TextColor><Align>top|right</Align></Mark>
               <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
-                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+                <EnabledControl>loop_enabled</EnabledControl><Color><Variable name="LoopColor"/></Color><Opacity>0.7</Opacity><DisabledColor><Variable name="TextLow"/></DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
             </Visual>
           </Children>
           <Connection><ConfigKey>[Skin],aio_show_4decks</ConfigKey><BindProperty>visible</BindProperty></Connection>
@@ -115,12 +124,12 @@
               <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>1</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
             <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel1]</Group>
               <SignalColor><Variable name="Sig1"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
-              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
-              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
-              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
-              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
+              <PlayPosColor><Variable name="WfPlay"/></PlayPosColor><BeatColor><Variable name="WfBeat"/></BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color><Variable name="WfPlay"/></Color><TextColor><Variable name="WfPlay"/></TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color><Variable name="CueColor"/></Color><TextColor><Variable name="CueColor"/></TextColor><Align>top|right</Align></Mark>
               <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
-                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+                <EnabledControl>loop_enabled</EnabledControl><Color><Variable name="LoopColor"/></Color><Opacity>0.7</Opacity><DisabledColor><Variable name="TextLow"/></DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
             </Visual>
           </Children>
         </WidgetGroup>
@@ -130,12 +139,12 @@
               <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>2</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
             <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel2]</Group>
               <SignalColor><Variable name="Sig2"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
-              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
-              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
-              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
-              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
+              <PlayPosColor><Variable name="WfPlay"/></PlayPosColor><BeatColor><Variable name="WfBeat"/></BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color><Variable name="WfPlay"/></Color><TextColor><Variable name="WfPlay"/></TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color><Variable name="CueColor"/></Color><TextColor><Variable name="CueColor"/></TextColor><Align>top|right</Align></Mark>
               <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
-                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+                <EnabledControl>loop_enabled</EnabledControl><Color><Variable name="LoopColor"/></Color><Opacity>0.7</Opacity><DisabledColor><Variable name="TextLow"/></DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
             </Visual>
           </Children>
         </WidgetGroup>
@@ -145,12 +154,12 @@
               <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>4</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
             <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel4]</Group>
               <SignalColor><Variable name="Sig4"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
-              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
-              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
-              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
-              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
+              <PlayPosColor><Variable name="WfPlay"/></PlayPosColor><BeatColor><Variable name="WfBeat"/></BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color><Variable name="WfPlay"/></Color><TextColor><Variable name="WfPlay"/></TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color><Variable name="CueColor"/></Color><TextColor><Variable name="CueColor"/></TextColor><Align>top|right</Align></Mark>
               <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
-                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+                <EnabledControl>loop_enabled</EnabledControl><Color><Variable name="LoopColor"/></Color><Opacity>0.7</Opacity><DisabledColor><Variable name="TextLow"/></DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
             </Visual>
           </Children>
           <Connection><ConfigKey>[Skin],aio_show_4decks</ConfigKey><BindProperty>visible</BindProperty></Connection>
@@ -177,7 +186,7 @@
       <Children>
 
         <!-- D1 HOTCUE -->
-        <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
           <Children>
             <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D1 HOTCUE</Text><Alignment>center</Alignment></Label>
             <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
@@ -215,15 +224,11 @@
         <WidgetGroup><Size>4f,min</Size></WidgetGroup>
 
         <!-- DECK 1 FX -->
-        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MaximumSize>76,-1</MaximumSize>
           <Children>
             <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>DECK 1 FX</Text><Alignment>center</Alignment></Label>
-            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
+            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
               <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">1</SetVariable></Template>
-              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
-              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">2</SetVariable></Template>
-              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
-              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">3</SetVariable></Template>
             </Children></WidgetGroup>
           </Children>
           <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey><BindProperty>visible</BindProperty></Connection>
@@ -232,7 +237,7 @@
         <WidgetGroup><Size>4f,min</Size></WidgetGroup>
 
         <!-- COLOR FX -->
-        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MaximumSize>116,-1</MaximumSize>
           <Children>
             <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>COLOR FX</Text><Alignment>center</Alignment></Label>
             <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
@@ -249,15 +254,11 @@
         <WidgetGroup><Size>4f,min</Size></WidgetGroup>
 
         <!-- DECK 2 FX -->
-        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MaximumSize>76,-1</MaximumSize>
           <Children>
             <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>DECK 2 FX</Text><Alignment>center</Alignment></Label>
-            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
+            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
               <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">1</SetVariable></Template>
-              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
-              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">2</SetVariable></Template>
-              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
-              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">3</SetVariable></Template>
             </Children></WidgetGroup>
           </Children>
           <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey><BindProperty>visible</BindProperty></Connection>
@@ -282,7 +283,7 @@
         </WidgetGroup>
 
         <!-- D2 HOTCUE -->
-        <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
           <Children>
             <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D2 HOTCUE</Text><Alignment>center</Alignment></Label>
             <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>

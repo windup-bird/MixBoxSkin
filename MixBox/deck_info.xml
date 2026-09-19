@@ -121,26 +121,22 @@
                   </WidgetGroup>
                   <WidgetGroup><Size>4f,min</Size></WidgetGroup>
 
-                  <!-- SYNC + MSTR + MT (top spacer centers cluster vertically) -->
+                  <!-- SYNC + MT：两个按钮平分纵向空间，sync_leader 状态直接显示在 SYNC 按钮上 -->
                   <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MinimumSize>52,</MinimumSize>
                     <Children>
-                      <WidgetGroup><SizePolicy>min,me</SizePolicy></WidgetGroup>
                       <PushButton>
-                        <ObjectName>SyncButton</ObjectName><Size>48f,24f</Size><NumberStates>2</NumberStates>
+                        <ObjectName>SyncButton</ObjectName><Size>48f,0me</Size><SizePolicy>me,me</SizePolicy><NumberStates>2</NumberStates>
                         <State><Number>0</Number><Text>SYNC</Text></State><State><Number>1</Number><Text>SYNC</Text></State>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_enabled</ConfigKey><ButtonState>LeftButton</ButtonState></Connection>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_leader</ConfigKey><ButtonState>RightButton</ButtonState></Connection>
-                      </PushButton>
-                      <Label>
-                        <ObjectName>SyncMstrLabel</ObjectName><Size>0me,6f</Size><Alignment>center</Alignment>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_leader</ConfigKey><BindProperty>highlight</BindProperty></Connection>
                         <Connection><ConfigKey><Variable name="Group"/>,sync_leader</ConfigKey><BindProperty>text</BindProperty>
                           <Transform><IsEqual>1</IsEqual><SetValue>MASTER</SetValue></Transform>
-                          <Transform><IsEqual>0</IsEqual><SetValue/></Transform>
+                          <Transform><IsEqual>0</IsEqual><SetValue>SYNC</SetValue></Transform>
                         </Connection>
-                      </Label>
+                      </PushButton>
                       <PushButton>
-                        <ObjectName>MTButton</ObjectName><Size>48f,24f</Size><NumberStates>2</NumberStates>
+                        <ObjectName>MTButton</ObjectName><Size>48f,0me</Size><SizePolicy>me,me</SizePolicy><NumberStates>2</NumberStates>
                         <State><Number>0</Number><Text>MT</Text></State><State><Number>1</Number><Text>MT</Text></State>
                         <Connection><ConfigKey><Variable name="Group"/>,keylock</ConfigKey></Connection>
                       </PushButton>
@@ -161,23 +157,23 @@
                 <ObjectName>DeckOverview</ObjectName>
                 <Size>0me,100f</Size>
                 <Group><Variable name="Group"/></Group>
-                <BgColor>#080c12</BgColor>
-                <SignalColor>#00d4aa</SignalColor>
-                <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
-                <PlayPosColor>#ffffff</PlayPosColor>
+                <BgColor><Variable name="WaveformBg"/></BgColor>
+                <SignalColor><Variable name="Accent"/></SignalColor>
+                <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
+                <PlayPosColor><Variable name="WfPlay"/></PlayPosColor>
                 <PlayedOverlayColor>#20ffffff</PlayedOverlayColor>
                 <DefaultMark>
                   <Align>bottom|right</Align>
-                  <Color>#ff5252</Color>
-                  <TextColor>#ffffff</TextColor>
+                  <Color><Variable name="CueColor"/></Color>
+                  <TextColor><Variable name="WfPlay"/></TextColor>
                   <Text> %1 </Text>
                 </DefaultMark>
-                <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
-                <Mark><Control>loop_start_position</Control><Text>IN</Text><Color>#00e676</Color><TextColor>#00e676</TextColor><Align>bottom</Align></Mark>
-                <Mark><Control>loop_end_position</Control><Text>OUT</Text><Color>#00e676</Color><TextColor>#00e676</TextColor><Align>bottom</Align></Mark>
+                <Mark><Control>cue_point</Control><Text>CUE</Text><Color><Variable name="CueColor"/></Color><TextColor><Variable name="CueColor"/></TextColor><Align>top|right</Align></Mark>
+                <Mark><Control>loop_start_position</Control><Text>IN</Text><Color><Variable name="LoopColor"/></Color><TextColor><Variable name="LoopColor"/></TextColor><Align>bottom</Align></Mark>
+                <Mark><Control>loop_end_position</Control><Text>OUT</Text><Color><Variable name="LoopColor"/></Color><TextColor><Variable name="LoopColor"/></TextColor><Align>bottom</Align></Mark>
                 <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
-                  <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.8</Opacity>
-                  <DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+                  <EnabledControl>loop_enabled</EnabledControl><Color><Variable name="LoopColor"/></Color><Opacity>0.8</Opacity>
+                  <DisabledColor><Variable name="TextLow"/></DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
                 <Connection><ConfigKey><Variable name="Group"/>,playposition</ConfigKey></Connection>
               </Overview>
             </Children>
