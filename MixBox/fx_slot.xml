@@ -21,15 +21,10 @@
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
         </Children>
       </WidgetGroup>
-      <EffectParameterName>
-        <ObjectName>FxSlotName</ObjectName><SizePolicy>me,min</SizePolicy><MinimumSize>44,12</MinimumSize><MaximumSize>64,12</MaximumSize>
-        <EffectRack>1</EffectRack><EffectUnit><Variable name="FxUnit"/></EffectUnit><Effect><Variable name="FxNum"/></Effect><EffectParameter>1</EffectParameter>
-        <Alignment>center</Alignment><Elide>right</Elide>
-        <Connection><ConfigKey>[EffectRack1_EffectUnit<Variable name="FxUnit"/>_Effect<Variable name="FxNum"/>],enabled</ConfigKey><BindProperty>highlight</BindProperty></Connection>
-      </EffectParameterName>
       <EffectSelector>
         <ObjectName>FxSlotSelector</ObjectName><Size>0me,22f</Size>
         <EffectRack>1</EffectRack><EffectUnit><Variable name="FxUnit"/></EffectUnit><Effect><Variable name="FxNum"/></Effect>
+        <Connection><ConfigKey>[EffectRack1_EffectUnit<Variable name="FxUnit"/>_Effect<Variable name="FxNum"/>],enabled</ConfigKey><BindProperty>highlight</BindProperty></Connection>
       </EffectSelector>
       <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
     </Children>

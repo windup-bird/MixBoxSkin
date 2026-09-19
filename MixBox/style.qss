@@ -9,7 +9,7 @@
 /************** Fonts **********************************************/
 #Mixxx, WWidget, WLabel, WNumber, WNumberPos, WNumberRate,
 WPushButton, WKey, WTime, WTrackProperty, WRateRange,
-WRecordingDuration, WEffectSelector, WEffectParameterName,
+WRecordingDuration, WEffectSelector,
 WEffectChainPresetSelector, WCoverArt, WOverview,
 WEffectMetaKnob, WBeatSpinBox {
   font-family: "Inter", "Open Sans Semibold", "Open Sans";
@@ -121,14 +121,12 @@ WBeatSpinBox::down-arrow, WBeatSpinBox::up-arrow { width: 0px; height: 0px; }
 #FxSlotBox, #ColorFxSlotBox { background-color: transparent; margin: 0px 2px; }
 WEffectMetaKnob, KnobComposed { background-color: transparent; }
 #FxKnobRow, #ColorFxKnobRow { background-color: transparent; }
-WEffectParameterName, #FxSlotName { color: #a2b1c6; font-size: 9px; font-weight: bold; }
-#FxSlotName[highlight="1"] { color: #3d8bfd; }
-#ColorFxSlotName { color: #3d8bfd; font-size: 10px; font-weight: bold; }
 WEffectSelector, #FxSlotSelector {
   background-color: #141a24; color: #3d8bfd;
   border: 1px solid #2c3646; border-radius: 4px; font-size: 10px; padding: 3px;
   min-width: 0px; min-height: 24px;
 }
+#FxSlotSelector[highlight="1"] { background-color: #3d8bfd; color: #0b1017; }
 WEffectChainPresetSelector#QuickEffectSelectorLeft {
   background-color: #141a24; color: #3d8bfd;
   border: 1px solid #2c3646; border-radius: 4px; font-size: 10px; padding: 3px 4px;

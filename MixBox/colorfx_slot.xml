@@ -20,10 +20,6 @@
           <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
         </Children>
       </WidgetGroup>
-      <Label>
-        <ObjectName>ColorFxSlotName</ObjectName><SizePolicy>me,min</SizePolicy><MinimumSize>44,12</MinimumSize><MaximumSize>56,12</MaximumSize>
-        <Text>Color <Variable name="ChanNum"/></Text><Alignment>center</Alignment>
-      </Label>
       <EffectChainPresetSelector>
         <ObjectName>QuickEffectSelectorLeft</ObjectName>
         <Size>0me,24f</Size>
