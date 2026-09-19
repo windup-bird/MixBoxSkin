@@ -162,7 +162,8 @@
                 <SignalColor><Variable name="Accent"/></SignalColor>
                 <SignalLowColor><Variable name="WfLow"/></SignalLowColor><SignalMidColor><Variable name="WfMid"/></SignalMidColor><SignalHighColor><Variable name="WfHigh"/></SignalHighColor>
                 <PlayPosColor><Variable name="WfPlay"/></PlayPosColor>
-                <PlayedOverlayColor>#20ffffff</PlayedOverlayColor>
+                <!-- 已播放区不再叠一层浅色遮罩 -->
+                <PlayedOverlayColor>#00ffffff</PlayedOverlayColor>
                 <DefaultMark>
                   <Align>bottom|right</Align>
                   <Color><Variable name="CueColor"/></Color>
