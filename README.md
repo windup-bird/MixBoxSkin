@@ -6,7 +6,7 @@ A dark, touch-first [Mixxx](https://mixxx.org) skin for all-in-one DJ units.
 - No image assets — everything is drawn by Mixxx widgets plus QSS
 - Palette: dark blue-grey base with a single `#3d8bfd` accent, one hue per deck
 
-![Mixbox v2 Touchscreen](overview.png)
+![Mixbox v2 Touchscreen](MixBox/skin_preview.png)
 
 ## Install
 
@@ -31,6 +31,7 @@ Deck cards     cover, title/artist, TIME/KEY/BPM/RANGE, SYNC/MT, overview
 
 | File | Role |
 | --- | --- |
+| `skin_preview.png` | 1920x1080 screenshot; Mixxx shows it in Preferences → Interface |
 | `skin.xml` | Root layout, manifest, scheme variables |
 | `style.qss` | All styling; the palette is documented in the header comment |
 | `deck_info.xml` | Deck card, instanced 4x |

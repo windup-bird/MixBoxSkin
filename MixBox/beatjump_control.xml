@@ -1,3 +1,10 @@
+<!--
+  Description:
+    Beatjump block: jump size (half / size box / double) and back / forward.
+    Row heights mirror hotcue_pad so the rows line up with the pads.
+  Variables:
+    ChanNum : deck number (1-4)
+-->
 <Template>
   <WidgetGroup>
     <ObjectName>BeatjumpControl</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>

@@ -1,3 +1,9 @@
+<!--
+  Description:
+    One quick-effect (filter) slot: meta knob plus the preset selector.
+  Variables:
+    ChanNum : deck number (1-4)
+-->
 <Template>
   <WidgetGroup>
     <ObjectName>ColorFxSlotBox</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>

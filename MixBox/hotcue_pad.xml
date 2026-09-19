@@ -1,3 +1,10 @@
+<!--
+  Description:
+    One hotcue pad: left click jumps, right click clears, colour from the hotcue.
+  Variables:
+    ChanNum : deck number (1-4)
+    PadNum  : hotcue number (1-8)
+-->
 <Template>
   <PushButton>
     <ObjectName>HotcuePad</ObjectName>

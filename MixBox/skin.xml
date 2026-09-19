@@ -1,4 +1,10 @@
 <!DOCTYPE skin>
+<!--
+  Description:
+    Root layout, manifest and colour-scheme variables of the skin.
+    The palette is split between this file (widget/XML colours, see <Scheme>)
+    and style.qss (QSS colours) - keep both in sync.
+-->
 <skin>
   <manifest>
     <title>Mixbox v2 Touchscreen</title>

@@ -1,3 +1,11 @@
+<!--
+  Description:
+    One deck FX slot: dry/wet meta knob plus the effect selector.
+    The selector is highlighted while the effect is enabled.
+  Variables:
+    FxUnit : effect unit number (1-2)
+    FxNum  : effect slot in the unit (1-3)
+-->
 <Template>
   <WidgetGroup>
     <ObjectName>FxSlotBox</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>

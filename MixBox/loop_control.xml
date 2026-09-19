@@ -1,3 +1,10 @@
+<!--
+  Description:
+    Loop block: loop size (half / size box / double) and IN / OUT.
+    Row heights mirror hotcue_pad so the rows line up with the pads.
+  Variables:
+    ChanNum : deck number (1-4)
+-->
 <Template>
   <WidgetGroup>
     <ObjectName>LoopControl</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
