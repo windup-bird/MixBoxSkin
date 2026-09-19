@@ -1,0 +1,172 @@
+/* Mixbox v2 — Modern dark theme with blue-green accent */
+/* ================================================================ */
+
+/************** Fonts **********************************************/
+#Mixxx, WWidget, WLabel, WNumber, WNumberPos, WNumberRate,
+WPushButton, WKey, WTime, WTrackProperty, WRateRange,
+WRecordingDuration, WEffectSelector, WEffectParameterName,
+WEffectChainPresetSelector, WCoverArt, WOverview,
+WEffectMetaKnob, WBeatSpinBox {
+  font-family: "Inter", "Open Sans Semibold", "Open Sans";
+  font-weight: 500; font-style: normal;
+}
+#DeckTitle, #KeyText, #BpmText, #DeckTime,
+#ToolbarButton[value="1"], #RecButton[value="1"] {
+  font-family: "Inter", "Open Sans"; font-weight: bold;
+}
+
+/************** Root ***********************************************/
+#Mixxx { background-color: #0b0f13; }
+
+/************** Toolbar ********************************************/
+#Toolbar { background-color: #0b0f13; padding: 3px 4px; }
+#ToolbarButton {
+  background-color: #181e26; color: #8ea0b4;
+  border: none; border-radius: 6px; font-size: 11px; font-weight: bold;
+  min-width: 60px; min-height: 28px; padding: 2px 10px;
+}
+#ToolbarButton[value="1"] { background-color: #00d4aa; color: #0b0f13; }
+#ClockLabel { color: #e4e8ec; font-size: 14px; font-weight: bold; }
+#MiniVuMeter { background-color: #11161d; border: none; border-radius: 2px; }
+#RecButton { background-color: #181e26; color: #8ea0b4; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-height: 28px; }
+#RecButton[value="1"], #RecButton[highlight="1"] { background-color: #ff5252; color: #fff; }
+#RecDuration { color: #8ea0b4; font-size: 12px; }
+#RecDuration[highlight="1"] { color: #ff5252; font-weight: bold; }
+
+/************** Waveform *******************************************/
+#WaveformArea { background-color: #080c12; margin: 1px 0px; }
+#WfDeckLabel1 { background-color: #00d4aa; } #WfDeckLabel2 { background-color: #00a8e8; }
+#WfDeckLabel3 { background-color: #7b68ee; } #WfDeckLabel4 { background-color: #ff6b9d; }
+#WfDeckNum { color: #0b0f13; font-size: 20px; font-weight: bold; }
+
+/************** Library *******************************************/
+#LibraryContainer { background-color: #0b0f13; padding: 2px; }
+#LibSidebar { background-color: #0b0f13; border-right: 1px solid #1e2a36; }
+#LibSplitter { background-color: #0b0f13; }
+WSearchBox, WSearchLineEdit {
+  background-color: #11161d; color: #e4e8ec;
+  border: 1px solid #1e2a36; border-radius: 8px; margin: 4px; padding: 8px 12px; font-size: 16px;
+  min-height: 44px;
+}
+WLibrary, WLibrary QTableView, WTrackTableView {
+  background-color: #0b0f13; color: #e4e8ec; border: none;
+  alternate-background-color: #11161d;
+  selection-background-color: #1a3a3a; selection-color: #00d4aa; font-size: 15px;
+}
+WTrackTableView { row-height: 52px; }
+WTrackTableView::item, WTrackTableView QTableView::item {
+  min-height: 52px; padding: 4px 8px;
+}
+WLibrary QHeaderView::section, WTrackTableViewHeader::section {
+  background-color: #11161d; color: #8ea0b4; border: none;
+  border-bottom: 1px solid #1e2a36; font-size: 12px; padding: 8px;
+  min-height: 36px;
+}
+WLibrarySidebar { background-color: #0b0f13; color: #8ea0b4; border: none; font-size: 15px; }
+WLibrarySidebar::item { min-height: 44px; padding: 8px; }
+WLibrarySidebar::item:selected { background-color: #1a3a3a; color: #00d4aa; }
+
+/************** Pads ***********************************************/
+#PadPageTitle { color: #00d4aa; font-size: 9px; font-weight: bold; margin-bottom: 1px; }
+#PadRow { background-color: transparent; margin: 1px 0px; }
+#HotcuePad, #LoopPad, #BeatjumpPad {
+  background-color: #181e26; color: #8ea0b4;
+  border: none; border-radius: 6px; font-size: 16px; font-weight: bold; margin: 2px;
+  min-width: 40px; min-height: 36px;
+}
+#HotcuePad[value="1"], #HotcuePad[highlight="1"] { color: #fff; }
+
+/************** Loop/Beatjump Controls ******************************/
+#LoopControl, #BeatjumpControl { background-color: #11161d; border-radius: 8px; padding: 2px; }
+#LoopSizeBtn, #JumpSizeBtn {
+  background-color: #181e26; color: #8ea0b4;
+  border: none; border-radius: 6px; font-size: 18px; font-weight: bold;
+  min-width: 48px; min-height: 40px;
+}
+#LoopSizeBtn:hover, #JumpSizeBtn:hover { color: #00d4aa; }
+#LoopSizeSpinBox, #JumpSizeSpinBox {
+  background-color: #11161d; color: #e4e8ec;
+  border: 1px solid #1e2a36; border-radius: 6px; font-size: 16px; font-weight: bold;
+  min-width: 48px; min-height: 40px;
+}
+#LoopInOutBtn {
+  background-color: #181e26; color: #8ea0b4;
+  border: none; border-radius: 6px; font-size: 14px; font-weight: bold;
+  min-width: 48px; min-height: 40px;
+}
+#LoopInOutBtn:hover { color: #00e676; }
+#LoopInOutBtn[pressed="true"], #LoopInOutBtn[highlight="1"] { background-color: #00e676; color: #0b0f13; }
+#JumpBtn {
+  background-color: #181e26; color: #40c4ff;
+  border: none; border-radius: 6px; font-size: 18px; font-weight: bold;
+  min-width: 48px; min-height: 40px;
+}
+#JumpBtn:hover { background-color: #40c4ff; color: #0b0f13; }
+WBeatSpinBox { background-color: #11161d; color: #e4e8ec; border: 1px solid #1e2a36; border-radius: 6px; font-size: 15px; min-height: 36px; }
+WBeatSpinBox::up-button, WBeatSpinBox::down-button { width: 0px; height: 0px; subcontrol-origin: margin; subcontrol-position: top right; }
+WBeatSpinBox::down-arrow, WBeatSpinBox::up-arrow { width: 0px; height: 0px; }
+
+/************** FX *************************************************/
+#FxPadArea { background-color: #11161d; margin: 1px 0px; padding: 3px 2px; }
+#FxCenterBlock { background-color: transparent; padding: 2px 4px; border-radius: 6px; }
+#FxSectionLabel { color: #00d4aa; font-size: 10px; font-weight: bold; }
+#FxSlotBox, #ColorFxSlotBox { background-color: transparent; margin: 0px 2px; }
+WEffectMetaKnob, KnobComposed { background-color: transparent; }
+#FxKnobRow, #ColorFxKnobRow { background-color: transparent; }
+WEffectParameterName, #FxSlotName { color: #8ea0b4; font-size: 9px; font-weight: bold; }
+#FxSlotName[highlight="1"] { color: #00d4aa; }
+#ColorFxSlotName { color: #18ffff; font-size: 10px; font-weight: bold; }
+WEffectSelector, #FxSlotSelector {
+  background-color: #11161d; color: #00d4aa;
+  border: 1px solid #1e2a36; border-radius: 4px; font-size: 10px; padding: 3px;
+  min-height: 24px;
+}
+WEffectChainPresetSelector#QuickEffectSelectorLeft {
+  background-color: #11161d; color: #18ffff;
+  border: 1px solid #1e2a36; border-radius: 4px; font-size: 10px; padding: 3px 4px;
+  min-height: 24px;
+}
+
+/************** Deck Cards *****************************************/
+#DeckArea { background-color: #0b0f13; padding: 0px; }
+#DeckInfoCard { background-color: #11161d; border: none; border-radius: 10px; margin: 1px 1px; padding: 4px 4px; }
+#DeckNumber { color: #e4e8ec; font-size: 24px; font-weight: bold; }
+WCoverArt { background-color: #0b0f13; border: none; border-radius: 8px; }
+
+#DeckTitle { color: #e4e8ec; font-size: 16px; font-weight: bold; padding: 0px 3px; }
+#DeckArtist { color: #8ea0b4; font-size: 13px; padding: 0px 3px; }
+
+#MetaMini { color: #556678; font-size: 8px; }
+#KeyText { color: #ffd740; font-size: 16px; font-weight: bold; }
+#BpmText { color: #e4e8ec; font-size: 16px; font-weight: bold; }
+#DeckTime { color: #e4e8ec; font-size: 16px; font-weight: bold; }
+
+#SyncButton { background-color: #181e26; color: #8ea0b4; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 26px; }
+#SyncButton[value="1"] { background-color: #40c4ff; color: #0b0f13; }
+#SyncMstrLabel { color: #556678; font-size: 9px; font-weight: bold; }
+#SyncMstrLabel[highlight="1"] { color: #ffd740; }
+
+#MTButton { background-color: #181e26; color: #8ea0b4; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; min-width: 44px; min-height: 26px; }
+#MTButton[value="1"] { background-color: #00d4aa; color: #0b0f13; }
+
+#RateRangeText { color: #8ea0b4; font-size: 11px; }
+#RateDeltaText { color: #e4e8ec; font-size: 12px; font-weight: bold; }
+
+/************** Overview (half-wave clipped) ***********************/
+#DeckOverviewClip { background-color: #080c12; border: none; overflow: hidden; }
+#DeckOverview { margin: 50% 0; }
+WOverview { background-color: #080c12; border: none; }
+
+/************** Settings ******************************************/
+#SettingsPanel { background-color: #181e26; margin: 2px 0px; border-radius: 10px; padding: 8px; }
+#SettingsBtn {
+  background-color: #11161d; color: #e4e8ec;
+  border: none; border-radius: 8px; font-size: 14px; font-weight: bold;
+  min-height: 52px;
+}
+#SettingsBtn:hover, #SettingsBtn[pressed="true"] { background-color: #1e2530; color: #00d4aa; }
+#SettingsBtn[value="1"] { background-color: #00d4aa; color: #0b0f13; }
+#SettingsLabel { color: #8ea0b4; font-size: 14px; }
+
+/************** Misc ***********************************************/
+#ToolbarSpacer { background-color: transparent; }

@@ -1,0 +1,35 @@
+<Template>
+  <WidgetGroup>
+    <ObjectName>ColorFxSlotBox</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>
+    <Children>
+      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+      <WidgetGroup>
+        <ObjectName>ColorFxKnobRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,min</SizePolicy>
+        <Children>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+          <KnobComposed>
+            <Size>38f,38f</Size>
+            <MinAngle>-130</MinAngle><MaxAngle>130</MaxAngle>
+            <ArcRadius>15</ArcRadius><ArcThickness>3</ArcThickness>
+            <ArcBgColor>#181e26</ArcBgColor><ArcBgThickness>2</ArcBgThickness>
+            <ArcRoundCaps>true</ArcRoundCaps>
+            <ArcColor>#18ffff</ArcColor>
+            <ArcUnipolar>false</ArcUnipolar>
+            <Connection><ConfigKey>[QuickEffectRack1_[Channel<Variable name="ChanNum"/>]],super1</ConfigKey></Connection>
+          </KnobComposed>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <Label>
+        <ObjectName>ColorFxSlotName</ObjectName><SizePolicy>me,min</SizePolicy><MinimumSize>44,12</MinimumSize><MaximumSize>56,12</MaximumSize>
+        <Text>Color <Variable name="ChanNum"/></Text><Alignment>center</Alignment>
+      </Label>
+      <EffectChainPresetSelector>
+        <ObjectName>QuickEffectSelectorLeft</ObjectName>
+        <Size>0me,24f</Size>
+        <EffectUnitGroup>[QuickEffectRack1_[Channel<Variable name="ChanNum"/>]]</EffectUnitGroup>
+      </EffectChainPresetSelector>
+      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

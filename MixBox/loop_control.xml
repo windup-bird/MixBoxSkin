@@ -1,0 +1,55 @@
+<Template>
+  <WidgetGroup>
+    <ObjectName>LoopControl</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+    <Children>
+      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+      <!-- Row 1: size control -->
+      <WidgetGroup><Layout>horizontal</Layout><Size>0me,40f</Size>
+        <Children>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+          <PushButton>
+            <ObjectName>LoopSizeBtn</ObjectName><SizePolicy>me,me</SizePolicy>
+            <NumberStates>1</NumberStates><State><Number>0</Number><Text>&lt;</Text></State>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_halve</ConfigKey></Connection>
+          </PushButton>
+          <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+          <BeatSpinBox>
+            <ObjectName>LoopSizeSpinBox</ObjectName><SizePolicy>me,min</SizePolicy><MinimumSize>36,0</MinimumSize><MaximumSize>48,40</MaximumSize>
+            <Value>[Channel<Variable name="ChanNum"/>],beatloop_size</Value>
+          </BeatSpinBox>
+          <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+          <PushButton>
+            <ObjectName>LoopSizeBtn</ObjectName><SizePolicy>me,me</SizePolicy>
+            <NumberStates>1</NumberStates><State><Number>0</Number><Text>&gt;</Text></State>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_double</ConfigKey></Connection>
+          </PushButton>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <WidgetGroup><Size>0min,2f</Size></WidgetGroup>
+      <!-- Row 2: IN / OUT -->
+      <WidgetGroup><Layout>horizontal</Layout><Size>0me,40f</Size>
+        <Children>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+          <PushButton>
+            <ObjectName>LoopInOutBtn</ObjectName><SizePolicy>me,me</SizePolicy>
+            <NumberStates>1</NumberStates><RightClickIsPushButton>true</RightClickIsPushButton>
+            <State><Number>0</Number><Text>IN</Text><Alignment>center</Alignment></State>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_in</ConfigKey><ButtonState>LeftButton</ButtonState></Connection>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_in_goto</ConfigKey><ButtonState>RightButton</ButtonState></Connection>
+          </PushButton>
+          <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+          <PushButton>
+            <ObjectName>LoopInOutBtn</ObjectName><SizePolicy>me,me</SizePolicy>
+            <NumberStates>1</NumberStates><RightClickIsPushButton>true</RightClickIsPushButton>
+            <State><Number>0</Number><Text>OUT</Text><Alignment>center</Alignment></State>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_out</ConfigKey><ButtonState>LeftButton</ButtonState></Connection>
+            <Connection><ConfigKey>[Channel<Variable name="ChanNum"/>],loop_out_goto</ConfigKey><ButtonState>RightButton</ButtonState></Connection>
+          </PushButton>
+          <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

@@ -1,0 +1,347 @@
+<!DOCTYPE skin>
+<skin>
+  <manifest>
+    <title>Mixbox v2 Touchscreen</title>
+    <author>windup-bird</author><version>5.0.0</version>
+    <description>Modern dark skin for touchscreen DJ devices — MixboxQML-inspired palette (1024x600+).</description>
+    <language>en</language>
+    <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
+    <attributes>
+      <attribute config_key="[App],num_decks">4</attribute>
+      <attribute config_key="[App],num_samplers">8</attribute>
+      <attribute config_key="[Controls],ShowDurationRemaining">1</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_4decks">0</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_browser">0</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_hotcue">1</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_loopjump">1</attribute>
+      <attribute persist="true" config_key="[Skin],show_waveforms">1</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_deckfx">1</attribute>
+      <attribute persist="true" config_key="[Skin],aio_show_colorfx">1</attribute>
+      <attribute persist="true" config_key="[Skin],show_coverart">1</attribute>
+      <attribute persist="true" config_key="[Skin],show_settings">0</attribute>
+    </attributes>
+  </manifest>
+
+  <Schemes>
+    <Scheme>
+      <Name>Dark</Name>
+      <Style src="skin:style.qss"/>
+      <SetVariable name="WaveformBg">#080c12</SetVariable>
+      <SetVariable name="Sig1">#00d4aa</SetVariable><SetVariable name="Sig2">#00a8e8</SetVariable>
+      <SetVariable name="Sig3">#7b68ee</SetVariable><SetVariable name="Sig4">#ff6b9d</SetVariable>
+    </Scheme>
+  </Schemes>
+
+  <ObjectName>Mixxx</ObjectName>
+  <Style src="skin:style.qss"/>
+  <MinimumSize>1024,600</MinimumSize>
+  <SizePolicy>me,me</SizePolicy>
+  <Layout>vertical</Layout>
+  <Children>
+
+    <!-- ═══ TOOLBAR ═══ -->
+    <WidgetGroup><ObjectName>Toolbar</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,44</MaximumSize>
+    <Children>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>BROWSE</Text></State><State><Number>1</Number><Text>BROWSE</Text></State>
+        <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>HOTCUE</Text></State><State><Number>1</Number><Text>HOTCUE</Text></State>
+        <Connection><ConfigKey>[Skin],aio_show_hotcue</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>90f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>LOOP/JUMP</Text></State><State><Number>1</Number><Text>LOOP/JUMP</Text></State>
+        <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>DECK FX</Text></State><State><Number>1</Number><Text>DECK FX</Text></State>
+        <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>COLOR FX</Text></State><State><Number>1</Number><Text>COLOR FX</Text></State>
+        <Connection><ConfigKey>[Skin],aio_show_colorfx</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>3f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>70f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>2-DECK</Text></State><State><Number>1</Number><Text>4-DECK</Text></State>
+        <Connection><ConfigKey persist="true">[Skin],aio_show_4decks</ConfigKey></Connection></PushButton>
+      <WidgetGroup><ObjectName>ToolbarSpacer</ObjectName><SizePolicy>me,min</SizePolicy></WidgetGroup>
+      <Time><ObjectName>ClockLabel</ObjectName><Size>56f,36f</Size></Time>
+      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+      <RecordingDuration><ObjectName>RecDuration</ObjectName><Size>40f,36f</Size><InactiveText/><Alignment>center</Alignment>
+        <Connection><ConfigKey>[Recording],status</ConfigKey><BindProperty>highlight</BindProperty></Connection></RecordingDuration>
+      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+      <VuMeter><ObjectName>MiniVuMeter</ObjectName><Size>40f,14f</Size><Horizontal>true</Horizontal><PeakHoldSize>3</PeakHoldSize><PeakHoldTime>500</PeakHoldTime>
+        <Connection><ConfigKey>[Main],vu_meter</ConfigKey></Connection></VuMeter>
+      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>RecButton</ObjectName><Size>44f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>REC</Text></State><State><Number>1</Number><Text>● REC</Text></State>
+        <Connection><ConfigKey>[Recording],toggle_recording</ConfigKey></Connection>
+        <Connection><ConfigKey>[Recording],status</ConfigKey><BindProperty>highlight</BindProperty><Transform><IsEqual>2</IsEqual></Transform></Connection></PushButton>
+      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+      <PushButton><ObjectName>ToolbarButton</ObjectName><Size>80f,36f</Size><NumberStates>2</NumberStates>
+        <State><Number>0</Number><Text>SETTINGS</Text></State><State><Number>1</Number><Text>SETTINGS</Text></State>
+        <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
+      <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+      <Battery><ObjectName>BatteryIcon</ObjectName><Size>18,18</Size></Battery>
+    </Children></WidgetGroup>
+
+    <!-- ═══ MAIN ═══ -->
+    <WidgetGroup><ObjectName>MainContent</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+    <Children>
+
+      <!-- WAVEFORM AREA -->
+      <WidgetGroup><ObjectName>WaveformArea</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+      <Children>
+        <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <WidgetGroup><ObjectName>WfDeckLabel3</ObjectName><Size>40f,0me</Size><Layout>vertical</Layout>
+              <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>3</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
+            <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel3]</Group>
+              <SignalColor><Variable name="Sig3"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
+              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
+              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
+                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+            </Visual>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_4decks</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+        <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <WidgetGroup><ObjectName>WfDeckLabel1</ObjectName><Size>40f,0me</Size><Layout>vertical</Layout>
+              <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>1</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
+            <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel1]</Group>
+              <SignalColor><Variable name="Sig1"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
+              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
+              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
+                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+            </Visual>
+          </Children>
+        </WidgetGroup>
+        <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <WidgetGroup><ObjectName>WfDeckLabel2</ObjectName><Size>40f,0me</Size><Layout>vertical</Layout>
+              <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>2</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
+            <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel2]</Group>
+              <SignalColor><Variable name="Sig2"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
+              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
+              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
+                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+            </Visual>
+          </Children>
+        </WidgetGroup>
+        <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <WidgetGroup><ObjectName>WfDeckLabel4</ObjectName><Size>40f,0me</Size><Layout>vertical</Layout>
+              <Children><WidgetGroup><Size/></WidgetGroup><Label><ObjectName>WfDeckNum</ObjectName><Size>40f,40f</Size><Alignment>center</Alignment><Text>4</Text></Label><WidgetGroup><Size/></WidgetGroup></Children></WidgetGroup>
+            <Visual><SizePolicy>me,me</SizePolicy><Group>[Channel4]</Group>
+              <SignalColor><Variable name="Sig4"/></SignalColor><BgColor><Variable name="WaveformBg"/></BgColor>
+              <SignalLowColor>#1a6dff</SignalLowColor><SignalMidColor>#00b894</SignalMidColor><SignalHighColor>#f0e6d0</SignalHighColor>
+              <PlayPosColor>#ffffff</PlayPosColor><BeatColor>#3e505a</BeatColor>
+              <DefaultMark><Align>bottom|right</Align><Color>#ffffff</Color><TextColor>#ffffff</TextColor><Text> %1 </Text></DefaultMark>
+              <Mark><Control>cue_point</Control><Text>CUE</Text><Color>#ff5252</Color><TextColor>#ff5252</TextColor><Align>top|right</Align></Mark>
+              <MarkRange><StartControl>loop_start_position</StartControl><EndControl>loop_end_position</EndControl>
+                <EnabledControl>loop_enabled</EnabledControl><Color>#00e676</Color><Opacity>0.7</Opacity><DisabledColor>#556678</DisabledColor><DisabledOpacity>0.4</DisabledOpacity></MarkRange>
+            </Visual>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_4decks</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+      </Children>
+      <Connection><ConfigKey>[Skin],show_waveforms</ConfigKey><BindProperty>visible</BindProperty></Connection>
+      <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey><Transform><Not/></Transform><BindProperty>visible</BindProperty></Connection>
+      </WidgetGroup>
+
+      <!-- LIBRARY -->
+      <WidgetGroup><ObjectName>LibraryContainer</ObjectName><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy>
+      <Children><Splitter><ObjectName>LibSplitter</ObjectName><SizePolicy>me,me</SizePolicy><SplitSizes>1,2</SplitSizes><Collapsible>1,0</Collapsible>
+        <Children>
+          <WidgetGroup><ObjectName>LibSidebar</ObjectName><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy><MinimumSize>160,</MinimumSize>
+            <Children><SearchBox><Size>0me,40f</Size></SearchBox><LibrarySidebar><SizePolicy>min,me</SizePolicy></LibrarySidebar></Children></WidgetGroup>
+          <Library><SizePolicy>me,me</SizePolicy></Library>
+        </Children></Splitter>
+      </Children>
+      <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey><BindProperty>visible</BindProperty></Connection>
+      </WidgetGroup>
+
+      <!-- FX/PAD ROW -->
+      <WidgetGroup><ObjectName>FxPadArea</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,82</MaximumSize>
+      <Children>
+
+        <!-- D1 HOTCUE -->
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D1 HOTCUE</Text><Alignment>center</Alignment></Label>
+            <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">1</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">2</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">3</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">4</SetVariable></Template>
+            </Children></WidgetGroup>
+            <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">5</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">6</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">7</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="PadNum">8</SetVariable></Template>
+            </Children></WidgetGroup>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_hotcue</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <!-- D1 LOOP/JUMP -->
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D1 LOOP</Text><Alignment>center</Alignment></Label>
+            <Template src="skin:loop_control.xml"><SetVariable name="ChanNum">1</SetVariable></Template>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D1 JUMP</Text><Alignment>center</Alignment></Label>
+            <Template src="skin:beatjump_control.xml"><SetVariable name="ChanNum">1</SetVariable></Template>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+
+        <!-- DECK 1 FX -->
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>DECK 1 FX</Text><Alignment>center</Alignment></Label>
+            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">1</SetVariable></Template>
+              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">2</SetVariable></Template>
+              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">1</SetVariable><SetVariable name="FxNum">3</SetVariable></Template>
+            </Children></WidgetGroup>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+
+        <!-- COLOR FX -->
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>COLOR FX</Text><Alignment>center</Alignment></Label>
+            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
+              <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+              <Template src="skin:colorfx_slot.xml"><SetVariable name="ChanNum">1</SetVariable></Template>
+              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
+              <Template src="skin:colorfx_slot.xml"><SetVariable name="ChanNum">2</SetVariable></Template>
+              <WidgetGroup><Size>0min,0me</Size></WidgetGroup>
+            </Children></WidgetGroup>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_colorfx</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+
+        <!-- DECK 2 FX -->
+        <WidgetGroup><ObjectName>FxCenterBlock</ObjectName><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>FxSectionLabel</ObjectName><Size>0me,14f</Size><Text>DECK 2 FX</Text><Alignment>center</Alignment></Label>
+            <WidgetGroup><Layout>horizontal</Layout><SizePolicy>me,me</SizePolicy><Children>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">1</SetVariable></Template>
+              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">2</SetVariable></Template>
+              <WidgetGroup><Size>2f,min</Size></WidgetGroup>
+              <Template src="skin:fx_slot.xml"><SetVariable name="FxUnit">2</SetVariable><SetVariable name="FxNum">3</SetVariable></Template>
+            </Children></WidgetGroup>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_deckfx</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+
+        <!-- D2 LOOP/JUMP -->
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D2 JUMP</Text><Alignment>center</Alignment></Label>
+            <Template src="skin:beatjump_control.xml"><SetVariable name="ChanNum">2</SetVariable></Template>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>me,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D2 LOOP</Text><Alignment>center</Alignment></Label>
+            <Template src="skin:loop_control.xml"><SetVariable name="ChanNum">2</SetVariable></Template>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_loopjump</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+
+        <!-- D2 HOTCUE -->
+        <WidgetGroup><Layout>vertical</Layout><SizePolicy>min,me</SizePolicy>
+          <Children>
+            <Label><ObjectName>PadPageTitle</ObjectName><Size>0me,12f</Size><Text>D2 HOTCUE</Text><Alignment>center</Alignment></Label>
+            <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">1</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">2</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">3</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">4</SetVariable></Template>
+            </Children></WidgetGroup>
+            <WidgetGroup><ObjectName>PadRow</ObjectName><Layout>horizontal</Layout><SizePolicy>min,me</SizePolicy><Children>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">5</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">6</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">7</SetVariable></Template>
+              <Template src="skin:hotcue_pad.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="PadNum">8</SetVariable></Template>
+            </Children></WidgetGroup>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_hotcue</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+      </Children>
+      <Connection><ConfigKey>[Skin],aio_show_browser</ConfigKey><Transform><Not/></Transform><BindProperty>visible</BindProperty></Connection>
+      </WidgetGroup>
+
+      <!-- SETTINGS — compact horizontal bar above waveform -->
+      <WidgetGroup><ObjectName>SettingsPanel</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy><MaximumSize>-1,38</MaximumSize>
+        <Children>
+          <WidgetGroup><ObjectName>ToolbarSpacer</ObjectName><SizePolicy>me,min</SizePolicy></WidgetGroup>
+          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>140f,32f</Size><NumberStates>2</NumberStates>
+            <State><Number>0</Number><Text>Fullscreen  F11</Text></State><State><Number>1</Number><Text>Fullscreen  F11</Text></State>
+            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
+          <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>160f,32f</Size><NumberStates>2</NumberStates>
+            <State><Number>0</Number><Text>Preferences  Ctrl+P</Text></State><State><Number>1</Number><Text>Preferences  Ctrl+P</Text></State>
+            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
+          <WidgetGroup><Size>4f,min</Size></WidgetGroup>
+          <PushButton><ObjectName>ToolbarButton</ObjectName><Size>140f,32f</Size><NumberStates>2</NumberStates>
+            <State><Number>0</Number><Text>Quit  Ctrl+Q</Text></State><State><Number>1</Number><Text>Quit  Ctrl+Q</Text></State>
+            <Connection><ConfigKey>[Skin],show_settings</ConfigKey></Connection></PushButton>
+        </Children>
+        <Connection><ConfigKey>[Skin],show_settings</ConfigKey><BindProperty>visible</BindProperty></Connection>
+      </WidgetGroup>
+
+      <!-- ═══ DECK AREA ═══ -->
+      <WidgetGroup><ObjectName>DeckArea</ObjectName><Layout>vertical</Layout><SizePolicy>me,min</SizePolicy>
+      <Children>
+        <WidgetGroup><ObjectName>DeckRow34</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy>
+          <Children>
+            <Template src="skin:deck_info.xml"><SetVariable name="ChanNum">3</SetVariable><SetVariable name="Group">[Channel3]</SetVariable></Template>
+            <Template src="skin:deck_info.xml"><SetVariable name="ChanNum">4</SetVariable><SetVariable name="Group">[Channel4]</SetVariable></Template>
+          </Children>
+          <Connection><ConfigKey>[Skin],aio_show_4decks</ConfigKey><BindProperty>visible</BindProperty></Connection>
+        </WidgetGroup>
+        <WidgetGroup><ObjectName>DeckRow12</ObjectName><Layout>horizontal</Layout><SizePolicy>me,min</SizePolicy>
+          <Children>
+            <Template src="skin:deck_info.xml"><SetVariable name="ChanNum">1</SetVariable><SetVariable name="Group">[Channel1]</SetVariable></Template>
+            <Template src="skin:deck_info.xml"><SetVariable name="ChanNum">2</SetVariable><SetVariable name="Group">[Channel2]</SetVariable></Template>
+          </Children>
+        </WidgetGroup>
+      </Children>
+      </WidgetGroup>
+
+    </Children></WidgetGroup>
+  </Children>
+</skin>
